@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monte Grappa</title>
-
+    <!-- Vorschaubild für Tab -->
+    <link rel="shortcut icon" href="images/user.jpg" type="image/x-icon">
+    <!--Font Awesome-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Leaflet Bibliothek-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="main.css">
+    <!--Eigene Stile und Script -->
+    <script defer src="main.js"></script>
+
 </head>
 
 <body>
@@ -79,7 +90,8 @@
             </p>
             <p> Der italienische Schreibgerätehersteller Montegrappa wurde nach dem Berg benannt.
             </p>
-            <a href="https://de.wikipedia.org/wiki/Monte_Grappa"><em>Quelle: Wikipedia</em></a>
+            <a href="https://de.wikipedia.org/wiki/Monte_Grappa"><em>Quelle: Wikipedia <i
+                        class="fa-brands fa-wikipedia-w"></i></em></a>
             <h3>Übersichtskarte</h3>
             <div id="map" style="width: 90%;height: 600px"></div>
             <h3>Links</h3>
@@ -92,26 +104,14 @@
     </main>
     <footer>
         <nav>
-            <h3>Navigation</h3>
-            <ul>
-                <li><a href=" https://madeleinehll.github.io/top">vorherige Top Location</a>
-                </li>
-                <li><a href="https://laurauniibk.github.io/top">diese Top Location</a></li>
-                <li><a href="https://webmapping.github.io/top">nächste Top Location</a></li>
-            </ul>
+            <a href=" https://madeleinehll.github.io/top"><i class="fa-solid fa-arrow-left"></i>
+                vorherige Top Location</a>
+            <a href="https://laurauniibk.github.io/top"><i class="fa-solid fa-house-user"></i> diese
+                Top Location</a>
+            <a href="https://webmapping.github.io/top">nächste Top Location <i
+                    class="fa-solid fa-arrow-right"></i></a>
         </nav>
     </footer>
-
-
-    <script>
-        var map = L.map('map').setView([45.873466, 11.799173], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        var marker = L.marker([45.873466, 11.799173]).addTo(map);
-        marker.bindPopup("<strong>Monte Grappa</strong>").openPopup();
-    </script>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ header a img {
 main {
     max-width: 1024px;
     margin: auto;
-    margin-top: -50px;
+    margin-top: -30px;
     border-left: 1px dashed gray;
     border-right: 1px dashed gray;
     border-bottom: 1px dashed gray;
@@ -78,7 +78,7 @@ figure>img,
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1080px) {
     main {
         border: none;
     }
