@@ -249,7 +249,7 @@ let jsondata = {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [173.68222, -42.41167]
+                "coordinates": [10.891667, 49.891667]
             },
             "properties": {
                 "user": "lealucia",
@@ -264,7 +264,7 @@ L.geoJSON(jsondata, {
 }).bindPopup(function (layer) {
     console.log(layer.feature.properties)
     return `
-    <strong>This is ${layer.feature.properties.name}</strong>
+    <h2>This is ${layer.feature.properties.name}</h2>
     <ul>
         <li>Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)}</li>
         <li>Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)}</li>
